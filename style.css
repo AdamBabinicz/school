@@ -103,6 +103,9 @@ body {
   cursor: pointer;
   transition: all 0.5s;
 }
+.card-btn:hover {
+  background: #3b4c6e;
+}
 .change .card-btn {
   width: 6rem;
   right: 3rem;
