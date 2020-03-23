@@ -72,13 +72,18 @@ body {
   font-style: italic;
   font-size: 2.5rem;
 }
-.contact-details q {
-  border-radius: 0.2rem;
+.contact-details textarea {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  outline: none;
   background: yellow;
+  line-height: 2rem;
+  margin-bottom: -0.45rem;
   font-size: 1.2em;
-  /* color: #ff040e; */
   text-shadow: 0 0 20px #87f;
-  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.39); */
+  resize: none;
+  padding: 0 2rem;
 }
 .card-btn {
   position: absolute;
@@ -92,7 +97,7 @@ body {
   border: none;
   font-family: "Dosis", serif;
   font-size: 2.4rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
   outline: none;
   cursor: pointer;
@@ -144,7 +149,7 @@ body {
   font-family: "Dosis", serif;
   font-size: 1.8rem;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.1rem;
   text-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
   transform: scale(0);
@@ -161,7 +166,6 @@ body {
   border-radius: 0.3rem;
   display: flex;
   align-items: center;
-  cursor: pointer;
   transform: translateY(-50%);
   opacity: 0;
   visibility: hidden;
@@ -225,8 +229,37 @@ body {
   letter-spacing: 0.1rem;
 }
 .card-social span {
-  margin-left: auto;
+  margin-left: 0.5rem;
   font-size: 2rem;
   font-weight: bold;
   color: #999;
+  cursor: pointer;
+  transition: all 0.5s;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.card-social:hover span {
+  color: rgb(77, 74, 74);
+}
+.box1,
+.box2,
+.box3 {
+  top: 5%;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  position: absolute;
+  font-size: 2rem;
+  transform: translateX(-50%);
+  font-family: "Dosis", serif;
+  color: green;
+  font-weight: 700;
+}
+.open {
+  position: absolute;
+  margin-left: 0.5rem;
+  visibility: visible;
+  opacity: 1;
 }
