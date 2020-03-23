@@ -79,10 +79,10 @@ body {
   outline: none;
   background: yellow;
   line-height: 2rem;
-  margin-bottom: -0.45rem;
   font-size: 1.2em;
   text-shadow: 0 0 20px #87f;
   resize: none;
+  margin-top: 0.05rem;
   padding: 0 1rem;
 }
 .card-btn {
@@ -187,6 +187,9 @@ body {
   opacity: 1;
   visibility: visible;
 }
+.null {
+  visibility: hidden;
+}
 .icon-wrapper {
   width: 4rem;
   height: 4rem;
@@ -247,7 +250,14 @@ body {
 }
 .box1,
 .box2,
-.box3 {
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9,
+.box10 {
   top: 5%;
   left: 50%;
   opacity: 0;
