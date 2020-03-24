@@ -1,6 +1,6 @@
 AuthName "Password"
 AuthType Basic
-AuthUserFile ../htac/.htpasswd
+AuthUserFile https://englishschool.netlify.com/htac/.htpasswd
 
 require valid-user
  
