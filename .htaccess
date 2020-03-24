@@ -1,8 +1,5 @@
-<IfModule mod_auth.c>
- AuthUserFile ../htac/.htpasswd
- AuthName "Username and password required"
- AuthType Basic
- <Limit GET POST>
-  Require valid-user
- </Limit>
-</IfModule>
+AuthName "Authorisation Required"
+AuthUserFile "https://englishschool.netlify.com/htac/.htpasswd"
+AuthType Basic
+require valid-user
+ErrorDocument 401 "Authorisation Required"
