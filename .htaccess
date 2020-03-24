@@ -1,5 +1,8 @@
-AuthName "text"
+AuthName "Podaj hasło!"
 AuthType Basic
 AuthUserFile /customers/2/c/f/englishschool.netlify.com/httpd.www/.htpasswd
 AuthGroupFile /dev/null 
 require valid-user
+ <Files index.html>
+  Require valid-user
+  </Files>
