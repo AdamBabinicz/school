@@ -1,6 +1,6 @@
 AuthName "Password"
 AuthType Basic
-AuthUserFile ..htac/htpasswd
+AuthUserFile ../htac/htpasswd
 
 require valid-user
  
