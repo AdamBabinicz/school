@@ -1,5 +1,5 @@
 AuthName "Authorisation Required"
-AuthUserFile "https://englishschool.netlify.com/htac/.htpasswd"
+AuthUserFile "./htac/.htpasswd"
 AuthType Basic
 require valid-user
 ErrorDocument 401 "Authorisation Required"
