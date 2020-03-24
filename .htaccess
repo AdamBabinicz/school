@@ -1,6 +1,8 @@
-AuthName "Password"
-AuthType Basic
-AuthUserFile ../htac/.htpasswd
-
-Require valid-user
- 
+<IfModule mod_auth.c>
+ AuthUserFile ../htac/.htpasswd
+ AuthName "Username and password required"
+ AuthType Basic
+ <Limit GET POST>
+  Require valid-user
+ </Limit>
+</IfModule>
