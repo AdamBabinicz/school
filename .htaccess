@@ -1,0 +1,5 @@
+AuthName "text"
+AuthType Basic
+AuthUserFile /customers/2/c/f/englishschool.netlify.com/httpd.www/.htpasswd
+AuthGroupFile /dev/null 
+require valid-user
