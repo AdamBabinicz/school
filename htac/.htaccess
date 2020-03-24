@@ -1,6 +1,6 @@
 AuthName "Podaj hasło!"
 AuthType Basic
-AuthUserFile /customers/2/c/f/englishschool.netlify.com/.htpasswd
+AuthUserFile /customers/2/c/f/englishschool.netlify.com/htac/.htpasswd
 AuthGroupFile /dev/null 
 require valid-user
  <Files index.html>
