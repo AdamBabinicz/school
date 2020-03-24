@@ -1,8 +1,6 @@
-AuthName "Podaj hasło!"
+AuthName "Password"
 AuthType Basic
-AuthUserFile englishschool.netlify.com/htac/.htpasswd
+AuthUserFile ..htac/htpasswd
 
 require valid-user
- <Files index.html>
-  Require valid-user
-  </Files>
+ 
