@@ -1,5 +1,5 @@
 AuthName "Authorisation Required"
-AuthUserFile "/.htpasswd"
+AuthUserFile ".htpasswd"
 AuthType Basic
 require valid-user
 ErrorDocument 401 "Authorisation Required"
