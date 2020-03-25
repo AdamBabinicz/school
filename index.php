@@ -1,5 +1,5 @@
-<?php
-$dir = dirname(__FILE__);
-echo “<p>Full path to this dir: ” . $dir . “</p>”;
-?>
 
+
+<?php
+echo __FILE__;
+?>
