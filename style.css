@@ -9,25 +9,64 @@ html {
 }
 body {
   overflow-x: hidden;
+  position: relative;
 }
 .container {
   width: 100%;
-  background: #051321;
+  background-image: linear-gradient(
+    60deg,
+    rgba(255, 0, 106, 0.445),
+    rgba(255, 0, 106, 0.712)
+  );
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  /* display: grid;
-  place-content: center; */
 }
 .card {
   margin-top: 3rem;
-  width: 40rem;
+  max-width: 40rem;
+  width: 100%;
+  position: relative;
+}
+.back {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-size: 5rem;
+  background: transparent;
+  color: #495d85;
+  opacity: 0.6;
+  z-index: 101;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.back::before {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: absolute;
+  content: "";
+  width: 3.1rem;
+  height: 3.1rem;
+  background: #fff;
+}
+.back:hover {
+  background: #3b4c6e;
+  opacity: 1;
 }
 .card-bio {
-  background: #458fa5;
+  background-image: linear-gradient(
+    60deg,
+    rgba(255, 0, 106, 0.445),
+    rgba(255, 0, 106, 0.712)
+  );
+  background: rgba(137, 43, 226, 0.623);
   padding: 3rem 3rem 8rem 3rem;
   display: -webkit-box;
   display: flex;
@@ -52,6 +91,7 @@ body {
 }
 .person-info {
   width: 100%;
+  margin-top: 2rem;
   font-family: "Dosis", serif;
   color: #fff;
   text-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
@@ -60,16 +100,22 @@ body {
   font-size: 2.5rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
-  margin-bottom: 1rem;
-  right: 2rem;
-  top: 5rem;
+  /* margin-bottom: 1rem; */
+  left: 39%;
+  top: 10%;
   position: absolute;
 }
 .person-info p {
   font-size: 1.8rem;
   width: 100%;
+  max-width: 100rem;
+  height: 100%;
+  min-height: 30rem;
   margin: 0 auto;
   line-height: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .person-info span {
   color: rgb(44, 18, 116);
@@ -79,7 +125,8 @@ body {
   font-size: 2.5rem;
 }
 .contact-details textarea {
-  width: 15rem;
+  max-width: 40rem;
+  width: 100%;
   height: 2rem;
   border: none;
   outline: none;
@@ -92,8 +139,9 @@ body {
   color: rgb(70, 68, 68);
   resize: none;
   margin-top: 0.05rem;
-  padding: 0 1rem;
-  text-align: center;
+  /* margin-left: -4rem; */
+  padding: 0 0.5rem;
+  text-align: left;
 }
 .card-btn {
   position: absolute;
@@ -146,7 +194,8 @@ body {
   opacity: 0;
   visibility: hidden;
 }
-.change .card-btn i {
+.change .card-btn i,
+.change .back i {
   opacity: 1;
   visibility: visible;
   -webkit-transition: all 0.5s;
@@ -191,12 +240,15 @@ body {
   border-radius: 0.3rem;
   display: -webkit-box;
   display: flex;
+  justify-content: center;
   -webkit-box-align: center;
   align-items: center;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   opacity: 0;
   visibility: hidden;
+  width: 100%;
+  max-width: 50rem;
 }
 .email {
   -webkit-transition: all 0.5s 0.3s;
@@ -220,8 +272,8 @@ body {
   visibility: hidden;
 }
 .icon-wrapper {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   display: -webkit-box;
   display: flex;
@@ -229,17 +281,27 @@ body {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
   padding: 1rem;
+  position: relative;
 }
 .email .icon-wrapper {
   background: #dd4b39;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
 }
 .fb .icon-wrapper {
   background: #3b5998;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .linkedin .icon-wrapper {
   background: #007bb6;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .icon-wrapper i {
   font-size: 2rem;
@@ -250,6 +312,8 @@ body {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   margin-bottom: 0.5rem;
+  /* text-indent: -1.6rem; */
+  margin-left: 4rem;
 }
 .email h4 {
   color: #dd4b39;
@@ -281,29 +345,24 @@ body {
 .card-social:hover span {
   color: rgb(77, 74, 74);
 }
-.box1,
-.box2,
-.box3,
-.box4,
-.box5,
-.box6,
-.box7,
-.box8,
-.box9,
-.box10 {
-  top: 0;
-  left: 50%;
+[class*="box"] {
+  top: 0.5rem;
+  left: 49%;
+  margin-left: 15rem;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.8rem;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   font-family: "Dosis", serif;
   color: green;
   font-weight: 700;
+  line-height: 1.7rem;
+  width: 100%;
+  text-align: center;
 }
 .open {
   position: absolute;
